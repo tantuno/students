@@ -1,0 +1,45 @@
+<head>
+    <meta charset="UTF-8"/>
+</head>
+<form action="/submit_form.html" method="post"
+    enctype="multipart/form-data" name="myform">
+
+    <input type="hidden" value="27" name="student_id" />
+
+    <div>
+        <label for="first_name">Ваше ім'я</label>
+        <input type="text" value="" name="first_name"
+            id="first_name" />
+    </div>
+
+    <div>
+        <label for="graduated">Закінчили навчання?</label>
+        <input type="checkbox" checked="1" name="graduated"
+            value="1" id="graduated" />
+    </div>
+
+    <div>
+        <label for="gender">Ваша стать</label>
+        <input type="radio" name="gender" value="male"
+            id="gender" />
+        <input type="radio" name="gender" value="female" />
+    </div>
+
+    <div>
+        <label for="age">Ваш вік</label>
+        <select name="age" id="age">
+            <option value="">
+                Будь-ласка, виберіть ваш вік
+            </option>
+            <option value="10">Більше ніж 10</option>
+            <option value="20">Більше ніж 20</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="info">Трохи про себе</label>
+        <textarea id="info"></textarea>
+    </div>
+    <input type="submit" name="save_button"
+           value="Зберегти" />
+</form>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>Сервіс Обліку Студентів</title>
+        <meta name="description"
+              value="Система Обліку Студентів Навчального Закладу"/>
+
+        <!-- Include Styles -->
+        <link rel="stylesheet"
+              href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="./css/main.css">
+
+
+        <style type="text/css">.col-xs-12, .col-xs-4, .col-xs-8 </style>
+
+
+    </head>
+
+    <body>
+
+        <!-- Start Conteiner-->
+        <div class="container">
+
+            <!--Start Header-->
+            <div class="row" id="header">
+                <!--Logo-->
+                <div class="col-xs-12">
+                    <h2>Форма редагування Студента</h2>
+                </div>
+            </div>
+            <!--End Header-->
+
+            <div class="input-group col-xs-12">
+                <table>
+                    <tr class="bottom">
+                        <td>Ім’я*</td>
+                        <td><input type="text" class="form-control" placeholder="Віталій"></td>
+                    </tr>
+                    <tr>
+                        <td>По-батькові</td>
+                        <td><input type="text" class="form-control" placeholder="Іванович"></td>
+                    </tr>
+                    <tr>
+                        <td>Прізвище</td>
+                        <td><input type="text" class="form-control" placeholder="Подоба"></td>
+                    </tr>
+                    <tr>
+                        <td>№ Білету</td>
+                        <td><input type="text" class="form-control" placeholder="254"></td>
+                    </tr>
+                    <tr>
+                        <td>Дата народження</td>
+                        <td><input type="text" class="form-control" placeholder="1984-06-17"></td>
+                    </tr>
+                    <tr>
+                        <td>Фото</td>
+                        <td>Наразі: <a href="./img/linux_256.jpg">/img/linux_256.jpg</a><br/>
+                        <input type="submit" value="Очистити"/><br/>
+                        Змінити:<input type="file"/> </td>
+                    </tr>
+                    <tr>
+                        <td>Група</td>
+                        <td>
+                            <select>
+                                <option value="">Усі студенти</option>
+                                <option value="">МтМ - 21</option>
+                                <option value="">МтМ - 22</option>
+                                <option value="">МтМ - 23</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Додаткові Нотатки</td>
+                        <td><textarea name="comment" id="comment" cols="48" rows="8"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><a href="#" class="btn btn-primary" role="button">Зберегти</a>
+                            <a href="#" class="btn btn-default" role="button">Скасувати</a></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+
+
+
+
+
+        </div>
+        <!--End Container-->
+
+
+        <!--Javascripts Selection-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+
+
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
+    </body>
+
+</html>

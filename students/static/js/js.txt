@@ -1,0 +1,16 @@
+<!-- Include Styles -->
+<link rel="stylesheet"
+      href="{{ PORTAL_URL }}{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{{ PORTAL_URL }}{% static 'css/bootstrap-datetimepicker.min.css' %}">
+<link rel="stylesheet" href="{{ PORTAL_URL }}{% static 'css/main.css' %}">
+
+
+<!--Javascripts Selection-->
+<script src="{% static "js/moment.min.js" %}"></script>
+<script src="{% static "js/jquery.js" %}"></script>
+<script src="{% static "js/jquery.form.min.js" %}"></script>
+<script src="{% static "js/jquery.cookie.js" %}"></script>
+<script src="{% static "js/bootstrap.min.js" %}"></script>
+<script src="{% static "js/bootstrap-datetimepicker.min.js" %}"></script>
+<script src="{% static "js/uk.js" %}"></script>
+<script src="{% static "js/main.js" %}"></script>

@@ -1,0 +1,79 @@
+{% extends "students/base.html" %}
+
+{% load i18n %}
+{% load static from staticfiles %}
+
+{% block meta_title %}{% trans "Exams" %}{% endblock meta_title %}
+
+{% block title %}{% trans "Exams List" %}{% endblock title %}
+
+
+
+{% block content %}
+<a href="{% url 'exam_add' %}" class="btn btn-primary">{% trans "Add Exam" %}</a>
+
+    <!--Start Students Listing-->
+    <table class="table">
+        {% with order_by=request.GET.order_by reverse=request.GET.reverse %}
+            <thead>
+            <a>
+                <th>#</th>
+                <th><a href="{% url 'exams' %}?order_by=subject{% if order_by == 'subject' and reverse != '1' %}&amp;reverse=1{% endif %}">
+                    {% trans "Subject" %}
+                    {% if order_by == 'subject' and reverse != '1' %}&uarr;
+                    {% elif order_by == 'subject' and reverse == '1' %}&darr;
+                    {% endif %}</a></th>
+                <th><a href="{% url 'exams' %}?order_by=date{% if order_by == 'date' and reverse != '1' %}&amp;reverse=1
+                {% elif order_by == '' and reverse != '1' %}&amp;reverse=1{% endif %}">{% trans "Date" %}
+                    {% if order_by == 'date' and reverse != '1' %}&uarr;
+                    {% elif order_by == '' and reverse != '1' %}&uarr;
+                    {% elif order_by == 'date' and reverse == '1' %}&darr;
+                    {% endif %}</a></th>
+                <th><a href="{% url 'exams' %}?order_by=teacher{% if order_by == 'teacher' and reverse != '1' %}&amp;reverse=1{% endif %}">
+                  {% trans "Teacher" %}
+                    {% if order_by == 'teacher' and reverse != '1' %}&uarr;
+                    {% elif order_by == 'teacher' and reverse == '1' %}&darr;
+                    {% endif %}</a></th>
+                <th><a href="{% url 'exams' %}?order_by=group{% if order_by == 'group' and reverse != '1' %}&amp;reverse=1{% endif %}">
+                  {% trans "Group" %}
+                    {% if order_by == 'group' and reverse != '1' %}&uarr;
+                    {% elif order_by == 'group' and reverse == '1' %}&darr;
+                    {% endif %}</a></th>
+            </tr>
+            </thead>
+        {% endwith %}
+        <tbody>
+            {% for exam in exams %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td><a title="{% trans "Edit" %}" href="{% url 'exam_edit' exam.id %}" >{{ exam.subject }}</a></td>
+                <td>{{ exam.date }}</td>
+                <td>{{ exam.teacher }}</td>
+                <td>{{ exam.group }}</td>
+                <td>
+                    <div class="btn-group">
+                            <a href="{% url 'exam_result' exam.id %}">
+                            <button type="button" class="btn btn-default btn-sm">
+                              <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                            </button></a>
+                            <a href="{% url 'exam_edit' exam.id %}">
+                            <button type="button" class="btn btn-default btn-sm">
+                              <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                            </button></a>
+                            <a href="{% url 'exam_delete' exam.id %}">
+                            <button type="button" class="btn btn-default btn-sm">
+                              <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                            </button></a>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+    <!--End Students Listing-->
+
+    {% include 'students/pagination.html' %}
+
+{% endblock content %}

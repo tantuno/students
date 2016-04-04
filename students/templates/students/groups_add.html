@@ -1,0 +1,47 @@
+{% extends "students/base.html" %}
+
+{% load i18n %}
+{% load static from staticfiles %}
+
+{% block meta_title %}{% trans "Add Group" %}{% endblock meta_title %}
+
+{% block title %}{% trans "Add Group" %}{% endblock title %}
+
+
+
+{% block content %}
+    <form action="." method="post" enctype="multipart/form-data" role="form" class="form-horizontal">
+        {% csrf_token %}
+        <div class="form-group {% if errors.title %}has-error{% endif %}">
+            <label for="title" class="col-sm-2 control-label">{% trans "Group" %}*</label>
+            <div class="col-sm-10">
+              <input type="text" value="{{ request.POST.title }}" name="title" id="title" placeholder="КА-22" class="form-control"/>
+              <span class="help-block">{{ errors.title }}</span>
+            </div>
+        </div>
+
+        <div class="form-group {% if errors.leader %}has-error{% endif %}">
+    <label for="leader"class="col-sm-2 control-label">{% trans "Leader" %}</label>
+    <div class="col-sm-10">
+      <select name="leader" id="leader"
+              class="form-control">
+        <option value="">{% trans "Select Student" %}</option>
+        {% for student in students %}
+        <option value="{{ student.id }}" {% if student.id == request.POST.leader|add:0 %}selected="1"{% endif %}>{{ student.first_name }} {{ student.last_name }}</option>
+        {% endfor %}
+      </select>
+      <span class="help-block">{{ errors.leader }}</span>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label"></label>
+    <div class="col-sm-10">
+      <input type="submit" value="{% trans "Add" %}" name="add_button"
+             class="btn btn-primary" />
+      <button type="submit" name="cancel_button"
+              class="btn btn-link">{% trans "Cancel" %}</button>
+    </div>
+  </div>
+</form>
+{% endblock content %}

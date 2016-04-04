@@ -1,0 +1,26 @@
+{% extends "students/base.html" %}
+
+{% load i18n %}
+{% load static from staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block meta_title %}{% trans "Contact Administrator" %}{% endblock meta_title %}
+
+{% block title %}{% trans "Contact Administrator" %}{% endblock title %}
+
+{% block status_message %}
+{% if form.errors %}
+  <div class="allert alert-warning" role="alert">
+    {% trans "Please, correct the following errors" %}
+  </div>
+{% endif %}
+
+{{ block.super }}
+
+{% endblock %}
+
+{% block content %}
+
+  {% crispy form %}
+
+{% endblock content %}

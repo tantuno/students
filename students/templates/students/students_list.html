@@ -1,0 +1,107 @@
+{% extends "students/base.html" %}
+
+{% load i18n %}
+{% load static from staticfiles %}
+{% load pagenav %}
+
+{% block meta_title %}{% trans "Students" %}{% endblock meta_title %}
+
+{% block title %}{% trans "Students List" %}{% endblock title %}
+
+
+
+{% block content %}
+{% if user.is_authenticated %}
+<a href="{% url 'students_add' %}" class="btn btn-primary">{% trans "Add Student" %}</a>
+{% endif %}
+
+    <!--Start Students Listing-->
+    <table class="table">
+        {% with order_by=request.GET.order_by reverse=request.GET.reverse %}
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>{% trans "Photo" %}</th>
+                <th>
+                    <a href="{% url 'home' %}?order_by=last_name{% if order_by == 'last_name' and reverse != '1' %}&amp;reverse=1
+                    {% elif order_by == '' and reverse != '1' %}&amp;reverse=1{% endif %}">
+                    {% trans "Last Name" %}
+                    {% if order_by == 'last_name' and reverse != '1' %}&uarr;
+                    {% elif order_by == '' and reverse != '1' %}&uarr;
+                    {% elif order_by == 'last_name' and reverse == '1' %}&darr;
+                    {% endif %}</a>
+                </th>
+                <th>
+                    <a href="{% url "home" %}?order_by=first_name{% if order_by == 'first_name' and reverse != '1' %}&amp;reverse=1{% endif %}">
+                    {% trans "First Name" %}
+                    {% if order_by == 'first_name' and reverse != '1' %}&uarr;
+                    {% elif order_by == 'first_name' and reverse == '1' %}&darr;
+                    {% endif %}
+                </th>
+                <th>
+                    <a href="{% url "home" %}?order_by=ticket{% if order_by == 'ticket' and reverse != '1' %}&amp;reverse=1{% endif %}">
+                    {% trans "Ticket #" %}
+                    {% if order_by == 'ticket' and reverse != '1' %}&uarr;
+                    {% elif order_by == 'ticket' and reverse == '1' %}&darr;
+                    {% endif %}
+                </th>
+                <th>
+                    <a href='{% url "home" %}?order_by=student_group{% if order_by == "student_group" and reverse != "1" %}&amp;reverse=1{% endif %}'>
+                    {% trans "Group" %}
+                    {% if order_by == 'student_group' and reverse != '1' %}&uarr;
+                    {% elif order_by == 'student_group' and reverse == '1' %}&darr;
+                    {% endif %}
+                </th>
+                {% if user.is_authenticated %}
+                <th>{% trans "Actions" %}</th>
+                {% endif %}
+            </tr>
+            </thead>
+        {% endwith %}
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td>{% if is_paginated %}
+                  {{ page_obj.start_index|add:forloop.counter0 }}
+                {% else %}
+                  {{ forloop.counter }}
+                {% endif %}</td>
+                <td>{% if student.photo %}
+                    <img class="img-circle" src="{{ student.photo.url }}" height="30" width="30" />
+                    {% else %}
+                    <img class="img-circle" src="{% static "img/default.jpg" %}" height="30" width="30" />
+                    {% endif %}</td>
+                <td>{{ student.last_name }}</td>
+                <td>{{ student.first_name }}</td>
+                <td>{{ student.ticket }}</td>
+                <td>{{ student.student_group.title }}</td>
+                {% if user.is_authenticated %}
+                <td>
+                    <div class="btn-group">
+                      <a href='{% url "students_edit" student.id %}' class="student-edit-form-link">
+                      <button type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                      </button></a>
+                      <a href='{% url "journal" student.id %}'>
+                      <button type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+                      </button></a>
+                      <a href='{% url "students_delete" student.id %}'>
+                      <button type="button" class="btn btn-default btn-sm">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                      </button></a>
+                    </div>
+                </td>
+                {% endif %}
+            </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+    <!--End Students Listing-->
+    <!--{% with object_list=students %}
+      {% include "students/pagination.html" %}
+    {% endwith %}-->
+    {% pagenav object_list=students is_paginated=is_paginated paginator=paginator %}
+
+{% endblock content %}

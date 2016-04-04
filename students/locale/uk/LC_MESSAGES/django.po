@@ -1,0 +1,410 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-02-07 20:24+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: models/exams.py:8
+msgid "Exam"
+msgstr "Екзамен"
+
+#: models/exams.py:9 templates/students/base.html:70
+#: templates/students/exam_list.html:6
+msgid "Exams"
+msgstr "Екзамени"
+
+#: models/exams.py:15 templates/students/exam_list.html:22
+msgid "Subject"
+msgstr "Прдмет"
+
+#: models/exams.py:19 models/monthjournal.py:20
+#: templates/students/exam_list.html:27
+msgid "Date"
+msgstr "Дата"
+
+#: models/exams.py:24 templates/students/exam_list.html:33
+msgid "Teacher"
+msgstr "Викладач"
+
+#: models/exams.py:27 models/groups.py:8 models/students.py:40
+#: templates/students/base.html:45 templates/students/exam_list.html:38
+#: templates/students/groups_add.html:16
+#: templates/students/students_add.html:64
+msgid "Group"
+msgstr "Група"
+
+#: models/groups.py:9 templates/students/base.html:68
+#: templates/students/groups_list.html:6
+msgid "Groups"
+msgstr "Групи"
+
+#: models/groups.py:15
+msgid "Title"
+msgstr "Назва"
+
+#: models/groups.py:18 templates/students/groups_add.html:24
+#: templates/students/groups_list.html:27
+msgid "Leader"
+msgstr "Староста"
+
+#: models/groups.py:25 models/students.py:52
+#: templates/students/students_add.html:77
+msgid "Additional Notes"
+msgstr "Додаткові Нотатки"
+
+#: models/monthjournal.py:10
+msgid "Monthly Journal"
+msgstr "Місячний Журнал"
+
+#: models/monthjournal.py:11
+msgid "Monthly Journals"
+msgstr "Місячні Журнали"
+
+#: models/monthjournal.py:14 models/students.py:9
+#: templates/students/journal.html:41
+msgid "Student"
+msgstr "Студент"
+
+#: models/students.py:10 templates/students/base.html:64
+#: templates/students/students_list.html:6
+msgid "Students"
+msgstr "Студенти"
+
+#: models/students.py:16 templates/students/students_add.html:16
+#: templates/students/students_list.html:33
+msgid "First Name"
+msgstr "Ім’я"
+
+#: models/students.py:21 templates/students/students_add.html:24
+#: templates/students/students_list.html:25
+msgid "Last Name"
+msgstr "Прізвище"
+
+#: models/students.py:26 templates/students/students_add.html:32
+msgid "Second Name"
+msgstr "По-батькові"
+
+#: models/students.py:31 templates/students/students_add.html:41
+msgid "Date of birth"
+msgstr "Дата народження"
+
+#: models/students.py:36 templates/students/students_add.html:49
+#: templates/students/students_list.html:21
+msgid "Photo"
+msgstr "Фото"
+
+#: models/students.py:48
+msgid "Ticket"
+msgstr "Білет"
+
+#: templates/contact_admin/form.html:7 templates/contact_admin/form.html:9
+msgid "Contact Administrator"
+msgstr "Зв’язок з Адміністратором"
+
+#: templates/contact_admin/form.html:14 templates/students/groups_edit.html:13
+#: templates/students/students_edit.html:13
+msgid "Please, correct the following errors"
+msgstr "Будь ласка, виправте наступні помилки"
+
+#: templates/students/base.html:10 templates/students/base.html.py:38
+msgid "Student Accounting Service"
+msgstr "Сервіс Обліку Студентів"
+
+#: templates/students/base.html:11
+msgid "APP to manage students database"
+msgstr "Додаток для управління Базою Студентів"
+
+#: templates/students/base.html:47
+msgid "All Students"
+msgstr "Усі Студенти"
+
+#: templates/students/base.html:66 templates/students/journal.html:6
+#: templates/students/journal_list.html:5
+msgid "Journal"
+msgstr "Журнал"
+
+#: templates/students/base.html:72
+msgid "Contact"
+msgstr "Контакт"
+
+#: templates/students/base.html:117
+msgid "Students Accounting Service"
+msgstr "Сервіс Обліку Студентів"
+
+#: templates/students/exam_list.html:8
+msgid "Exams List"
+msgstr "База Екзаменів"
+
+#: templates/students/exam_list.html:13
+msgid "Add Exam"
+msgstr "Додати Екзамен"
+
+#: templates/students/exam_list.html:49 templates/students/groups_list.html:40
+#: templates/students/groups_list.html:41 templates/students/journal.html:68
+#: templates/students/students_list.html:62
+#: templates/students/students_list.html:63
+msgid "Edit"
+msgstr "Редагувати"
+
+#: templates/students/groups_add.html:6 templates/students/groups_add.html:8
+#: templates/students/groups_list.html:11
+msgid "Add Group"
+msgstr "Додати Групу"
+
+#: templates/students/groups_add.html:28
+msgid "Select Student"
+msgstr "Виберіть Студента"
+
+#: templates/students/groups_add.html:40
+#: templates/students/students_add.html:86
+msgid "Add"
+msgstr "Додати"
+
+#: templates/students/groups_add.html:43
+#: templates/students/students_add.html:89 views/students.py:174
+msgid "Cancel"
+msgstr "Скасувати"
+
+#: templates/students/groups_confirm_delete.html:7
+#: templates/students/groups_confirm_delete.html:9
+msgid "Delete Group"
+msgstr "Видалити Групу"
+
+#: templates/students/groups_confirm_delete.html:18
+#, python-format
+msgid "Do you really want to delete group: \"%(object)s\"?"
+msgstr "Ви справді хочете видалити групу: \"%(object)s\"?"
+
+#: templates/students/groups_confirm_delete.html:20
+#: templates/students/students_confirm_delete.html:18
+msgid "Yes"
+msgstr "Так"
+
+#: templates/students/groups_confirm_delete.html:22
+#: templates/students/students_confirm_delete.html:20
+msgid "No"
+msgstr "Ні"
+
+#: templates/students/groups_edit.html:7 templates/students/groups_edit.html:9
+msgid "Edit Group"
+msgstr "Редагувати Групу"
+
+#: templates/students/groups_list.html:8
+msgid "Groups List"
+msgstr "База Груп"
+
+#: templates/students/groups_list.html:28
+#: templates/students/students_list.html:45
+msgid "Actions"
+msgstr "Дії"
+
+#: templates/students/journal.html:8
+msgid "Accounting Visits"
+msgstr "Облік Відвідування"
+
+#: templates/students/journal.html:16
+#, python-format
+msgid ""
+"There are no students in the database yet. Please, <a href=\"%(student_add)s"
+"\">add</a> first student."
+msgstr ""
+"Поки що в базі немає студентів. Будь ласка, <a href=\"%(student_add)s"
+"\">додайте</a> першого студента.>"
+
+#: templates/students/journal.html:22
+msgid ""
+"We automatically save changes into journal while you click inside table "
+"cells."
+msgstr "При кліку зміни автоматично зберігаються в журнал "
+
+#: templates/students/journal.html:23
+msgid "Saving..."
+msgstr "Йде збареження..."
+
+#: templates/students/journal.html:28
+msgid "Previous Month"
+msgstr "Попередній Місяць"
+
+#: templates/students/journal.html:32
+msgid "Next Month"
+msgstr "Наступний Місяць"
+
+#: templates/students/journal_list.html:7
+msgid "Accounting Visiting"
+msgstr "Облік Відвідування"
+
+#: templates/students/students_add.html:6
+#: templates/students/students_list.html:13
+msgid "Add Student"
+msgstr "Додати Студента"
+
+#: templates/students/students_add.html:19
+msgid "John"
+msgstr "Микола"
+
+#: templates/students/students_add.html:27
+msgid "Watson"
+msgstr "Петренко"
+
+#: templates/students/students_add.html:34
+msgid "Hamish"
+msgstr "Васильович"
+
+#: templates/students/students_add.html:57
+#: templates/students/students_list.html:40
+msgid "Ticket #"
+msgstr "№ Білету"
+
+#: templates/students/students_add.html:68
+msgid "Select Group"
+msgstr "Виберіть Групу"
+
+#: templates/students/students_confirm_delete.html:7
+#: templates/students/students_confirm_delete.html:9
+msgid "Delete Student"
+msgstr "Видалити Студента"
+
+#: templates/students/students_confirm_delete.html:17
+#, python-format
+msgid "Do you really want to delete student: \"%(object)s\"?"
+msgstr "Ви справді хочете видалити студента: \"%(object)s\"?"
+
+#: templates/students/students_edit.html:7
+#: templates/students/students_edit.html:9
+msgid "Edit Student"
+msgstr "Редагувати Студента"
+
+#: templates/students/students_list.html:8
+msgid "Students List"
+msgstr "База Студентів"
+
+#: views/contact_admin.py:36
+msgid "Send"
+msgstr "Надіслати"
+
+#: views/contact_admin.py:40
+msgid "Your Email Address"
+msgstr "Ваша Email Адреса"
+
+#: views/contact_admin.py:43
+msgid "Email Subject"
+msgstr "Тема Листа"
+
+#: views/contact_admin.py:47
+msgid "Email Body"
+msgstr "Текст Повідомлення"
+
+#: views/contact_admin.py:64
+msgid "An error occured during email transfer. Please, try again later."
+msgstr ""
+"Під час надсилання листа сталася непердбачувана помилка. Будь ласка, "
+"спробуйте пізніше"
+
+#: views/contact_admin.py:69
+msgid "Message sent successfully!"
+msgstr "Повідомлення успішно надіслане!"
+
+#: views/groups.py:19
+#, fuzzy
+#| msgid "Student deleted successfully!"
+msgid "Group deleted successfully!"
+msgstr "Студент успішно видалений!"
+
+#: views/groups.py:44
+#, fuzzy
+#| msgid "First Name field is required"
+msgid "Group field is required"
+msgstr "Ім’я є обов’язковим"
+
+#: views/groups.py:48
+msgid "A group of that name already exists"
+msgstr "Група з таким ім’ям вже існує"
+
+#: views/groups.py:58
+msgid "Select correct student"
+msgstr "Виберіть коректного студента"
+
+#: views/groups.py:60
+msgid "This student is the leader of another group"
+msgstr "Цей студент є старостою іншої групи"
+
+#: views/groups.py:70
+#, fuzzy
+#| msgid "Student added successfully!"
+msgid "Group added successfully!"
+msgstr "Студент успішно доданий!"
+
+#: views/groups.py:81
+msgid "Adding a group canceled!"
+msgstr "Додавання групи скасовано!"
+
+#: views/students.py:66
+msgid "First Name field is required"
+msgstr "Ім’я є обов’язковим"
+
+#: views/students.py:72
+msgid "Last Name field is required"
+msgstr "Прізвище є обов’язковим"
+
+#: views/students.py:78
+msgid "Date of birth field is required"
+msgstr "Дата народження є обов’язковою"
+
+#: views/students.py:84
+msgid "Enter the correct date format (example 1984-12-30)"
+msgstr "Введіть корректний формат дати (напр. 1984-12-30)"
+
+#: views/students.py:90
+msgid "Ticket number is required"
+msgstr "Білет є обов’язковим"
+
+#: views/students.py:96
+msgid "Select group for students"
+msgstr "Виберіть для студента групу"
+
+#: views/students.py:100
+msgid "Select correct group"
+msgstr "Виберіть коректну групу"
+
+#: views/students.py:112
+msgid "File size larger than 2 Mb"
+msgstr "Розмір файлу більший ніж 2 Mb"
+
+#: views/students.py:123
+msgid "Student added successfully!"
+msgstr "Студент успішно доданий!"
+
+#: views/students.py:133
+msgid "Adding a student canceled!"
+msgstr "Додавання студента скасовано!"
+
+#: views/students.py:173
+msgid "Save"
+msgstr "Зберегти"
+
+#: views/students.py:184
+msgid "Student saved successfully!"
+msgstr "Студент успішно збережений!"
+
+#: views/students.py:190
+msgid "Editing a student canceled!"
+msgstr "Редагування студента скасовано!"
+
+#: views/students.py:200
+msgid "Student deleted successfully!"
+msgstr "Студент успішно видалений!"

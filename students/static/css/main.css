@@ -1,0 +1,120 @@
+/*Global Styles*/
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+.alert {
+    /*Ми додали відстань лише зверху елемента*/
+    margin-top: 10px;
+}
+
+/*Знайшли елемент футера по його унікальному ідентифікатору footer*/
+#footer {
+    /*Задаємо верхню межу елемента: ширина лінії, тип лінії, колір лінії*/
+    border-top: 1px solid #dddddd;
+
+    /*Задаємо внутрішню відстань елемента до верхнього краю*/
+    padding-top: 10px;
+}
+
+/*Group Selector*/
+#group-selector {
+    margin-top: 30px;
+}
+
+#group-selector select {
+    margin: 0;
+    width: 60%;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    height: 30px;
+    line-height: 30px;
+    color: #555555;
+}
+
+.center {
+    text-align: center;
+    font-weight: bold;
+}
+
+table {
+
+        border-collapse: collapse;
+    }
+
+table.bord th,
+table.bord td {
+    padding: 0 5px;
+    border: 1px solid #dddddd;
+    text-align: center;
+}
+
+.bord-top {
+    padding-top: 30px;
+}
+
+.align {
+    text-align: right;
+}
+.forms {
+    padding: 2px;
+}
+
+.bottom {
+    margin: 10px;
+}
+
+textarea,
+select,
+input {
+  max-width: 300px;
+}
+
+th.day-box,
+th.day-header {
+  padding: 4px !important;
+  vertical-align: middle !important;
+  text-align: center;
+}
+
+#ajax-progress-indicator {
+  display: none;
+}
+
+
+
+/* Start by setting display:none to make this hidden.
+   Then we position it in relation to the viewport window
+   with position:fixed. Width, height, top and left speak
+   for themselves. Background we set to 80% white with
+   our animation centered, and no-repeating */
+.modal1 {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 )
+                url('../img/ajax-loader.gif')
+                50% 50%
+                no-repeat;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal1 {
+    display: block;
+}
+
+#user-toolbar {
+  margin-top: 30px;
+  text-align: right;
+}
